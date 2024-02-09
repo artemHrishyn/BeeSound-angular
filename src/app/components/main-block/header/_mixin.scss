@@ -1,0 +1,11 @@
+@mixin gridMenu(){
+    @media screen and (max-width: 4000px) {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 1700px) {
+        grid-template-columns: 2fr 1fr;
+    }
+}
