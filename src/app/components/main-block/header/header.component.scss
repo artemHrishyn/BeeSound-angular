@@ -1,0 +1,47 @@
+@import './_mixin.scss';
+
+:host{
+    @include gridMenu;
+    margin: 20px 100px;
+}
+
+
+img{
+    max-width: clamp(25px, 2vw, 70px);
+    margin-right: clamp(10px, 2vw, 60px);;
+}
+
+.title{
+    display: flex;
+    width: 100%;
+    
+    h2{
+        color: #000;
+        font-size: clamp(25px, 3vw, 80px);
+        font-weight: 500;
+    }
+}
+
+
+ul{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    list-style: none;
+    
+    li {
+        margin-right: 90px;
+
+        a{
+            color: #000;
+            font-size: clamp(20px, 2vw, 50px);
+            font-weight: 200;
+            text-decoration: none;
+        }
+    }
+}
+
+.panel{
+    display: flex;
+    width: 100%;
+}

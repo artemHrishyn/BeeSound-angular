@@ -1,0 +1,26 @@
+@media screen and (max-width: 1700px) {
+    :host{
+        grid-gap: 20px;
+    }
+    
+    ul{
+        grid-column: 1/-1;
+        grid-row: 2/3;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    :host{
+        margin: 15px 30px;
+    }
+    
+    ul{
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    ul{
+        flex-direction: column;
+    }
+}
