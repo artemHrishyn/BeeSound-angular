@@ -1,0 +1,17 @@
+<div class="title">
+    <img src="../../../../assets/images/icon/menu-3d.svg" alt="menu" (click)="showMenu()" *ngIf="menu">
+    <img src="../../../../assets/images/icon/streamline.svg" alt="title">
+    <h2>BeeSound</h2>
+</div>
+
+<ul *ngIf="menuShow">
+    <li><a href="">Our Colection</a></li>
+    <li><a href="">New Arrivals</a></li>
+    <li><a href="">For Gamers</a></li>
+</ul>
+
+<div class="panel">
+    <img src="../../../../assets/images/icon/search.svg" alt="search">
+    <img src="../../../../assets/images/icon/shop.svg" alt="shop">
+    <img [src]="getImagePath()" alt="user" (click)="toggleUserOpen()">
+</div>
