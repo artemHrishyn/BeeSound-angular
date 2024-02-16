@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { LoginFormComponent } from '../../login-form/login-form.component';
 
 @Component({
   selector: 'bsa-header',
   standalone: true,
   imports: [
-    CommonModule
+    CommonModule,
+    LoginFormComponent
   ],
   templateUrl: './header.component.html',
   styleUrls: [
@@ -14,12 +16,11 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class HeaderComponent implements OnInit {
-  private userOpen: boolean = false;
+  public userOpen: boolean = false;
   public userImg: string = '';
 
   public menuShow: boolean = true;
   public menu: boolean = false;
-
   
   ngOnInit() {
     this.menu = window.innerWidth < 1700;
