@@ -1,0 +1,99 @@
+@import './mixin';
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+:host{
+    display: flex;
+    background-color: #F2F5FF;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h3{
+  color: #000;
+  font-size: clamp(20px, 3vw, 40px);
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.info{
+  @include gridInfo;
+  margin: 43px 70px;
+
+  li{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #000;
+      font-size: clamp(10px, 2vw, 25px);
+      font-weight: 200;
+      line-height: 1.5;
+      letter-spacing: 6px;
+
+      p{
+          margin-bottom: 30px;
+          color: #000;
+          font-size: clamp(10px, 2vw, 25px);
+          font-weight: 200;
+          line-height: 1.5;
+          letter-spacing: 6px;
+      }
+  }
+
+  &__title{
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      img{
+          max-width: clamp(25px, 2vw, 40px);
+          margin-right: clamp(10px, 2vw, 15px);
+      }
+
+      h3{
+        margin-bottom: 0;
+        color: #000;
+        font-weight: 500;
+      }
+  }
+
+  &__map li{
+    margin-bottom: 10px;
+  }
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: clamp(270px, 40vw, 950px);
+    width: 100%;
+    
+  :nth-child(2){
+    align-self: center;
+    max-width: clamp(100px, 18vw, 430px);
+    width: 100%;
+  }
+}
+
+input{
+  height: 54px;
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 15px;
+  font-size: clamp(10px, 14vw, 25px);
+  color: #787878;
+}
+
+.email{
+  border-color: #E8E8E8;
+  padding: 16px;
+}
+
+.but{
+  background-color: #1B234A;
+  padding: 16px 0;
+}
