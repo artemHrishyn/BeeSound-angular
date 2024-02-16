@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
   templateUrl: './footer.component.html',
   styleUrls: [
     './footer.component.scss',
-    'media.scss'
+    'media.scss',
+    'social.scss'
   ]
 })
 export class FooterComponent {
