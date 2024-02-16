@@ -1,0 +1,121 @@
+// color
+$red: #dc4a38;
+$blue:  #006699;
+$lightblue: #1da1f2;
+$violet: #3f51b5;
+
+.info__social {
+    flex-direction: row;
+    
+    &__col {
+      position: relative;
+      margin-right: clamp(10px, 2vw, 30px);
+      padding: clamp(15px, 2vw, 25px);
+  
+      a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        
+        &:hover {
+          z-index: 3;
+          -webkit-clip-path: none;
+          clip-path: none;
+        }
+        &:nth-child(1):hover ~ .box {
+          transform: rotateX(180deg);
+        }
+        &:nth-child(2):hover ~ .box {
+          transform: rotateY(180deg);
+        }
+        &:nth-child(3):hover ~ .box {
+          transform: rotateX(-180deg);
+        }
+        &:nth-child(4):hover ~ .box {
+          transform: rotateY(-180deg);
+        }
+        &:nth-child(1):hover ~ .box:after, &:nth-child(3):hover ~ .box:after {
+          transform: rotateX(-180deg);
+        }
+        &:nth-child(2):hover ~ .box:after, &:nth-child(4):hover ~ .box:after {
+          transform: rotateY(-180deg);
+        }
+      }
+      .box {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+          0 3px 1px -2px rgba(0, 0, 0, 0.2),
+          0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        transform-style: preserve-3d;
+        transition: transform .3s ease-in-out;
+  
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          left: 12%;
+          height: 100%;
+          display: flex;
+          color: #FFF;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: clamp(20px, 2vw, 40px);
+          z-index: 2;
+          backface-visibility: hidden;
+          align-items: center;
+          justify-content: center;
+        }
+        &:after {
+          content: "\1F44D";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          font-size: clamp(20px, 2vw, 25px);
+          border-radius: 2px;
+          transition-delay: .15s;
+        }
+      }
+      
+      &:nth-child(1) .box:before {
+        content: "\f16d";
+        background: $violet;
+      }
+      &:nth-child(1) .box:after {
+        background: $violet;
+      }
+      
+      &:nth-child(2) .box:before {
+        content: "\f0e1";
+        background: $blue;
+      }
+      &:nth-child(2) .box:after {
+        background: $blue;
+      }
+  
+      &:nth-child(3) .box:before {
+        content: "\f2c6";
+        background: $lightblue;
+      }
+      &:nth-child(3) .box:after {
+        background: $lightblue;
+      }
+      &:nth-child(4) .box:before {
+        content: "\f232";
+        background: $red;
+      }
+      &:nth-child(4) .box:after {
+        background: $red;
+      }
+      &:nth-child(5) .box:before {
+        content: "\f167";
+        background: $red;
+      }
+      &:nth-child(5) .box:after {
+        background: $red;
+      }
+    }
+  }
