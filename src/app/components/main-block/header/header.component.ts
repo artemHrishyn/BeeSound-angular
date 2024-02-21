@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { LoginFormComponent } from '../../login-form/login-form.component';
 
 @Component({
   selector: 'bsa-header',
   standalone: true,
   imports: [
-    CommonModule
+    CommonModule,
+    LoginFormComponent
   ],
   templateUrl: './header.component.html',
   styleUrls: [
