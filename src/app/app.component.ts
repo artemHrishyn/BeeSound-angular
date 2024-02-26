@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/main-block/header/header.component';
 import { FooterComponent } from './components/main-block/footer/footer.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
 
 @Component({
   selector: 'bsa-root',
