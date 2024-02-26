@@ -16,12 +16,11 @@ import { LoginFormComponent } from '../../login-form/login-form.component';
   ]
 })
 export class HeaderComponent implements OnInit {
-  private userOpen: boolean = false;
+  public userOpen: boolean = false;
   public userImg: string = '';
 
   public menuShow: boolean = true;
   public menu: boolean = false;
-
   
   ngOnInit() {
     this.menu = window.innerWidth < 1700;
