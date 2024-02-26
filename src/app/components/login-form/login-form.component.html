@@ -10,16 +10,27 @@
     </div>
   </div>
   <div class="col">
-    <form>
+    <form novalidate [formGroup]="loginData" (ngSubmit)="onSubmit(loginData)">
       <h2>Login</h2>
         <p>
-          <input type="text" placeholder="Username" required />
+          <input
+            type="text"
+            placeholder="Username" 
+            formControlName="login"
+            name="login" required
+          />
         </p>
         <p>
-          <input type="password" placeholder="Password" required />
+          <input
+            #password
+            type="password"
+            placeholder="Password"
+            formControlName="password"
+            name="password" required
+          />
         </p>
         <p>
-          <input class="btn" type="submit" value="Sing In" />
+          <input class="btn" type="submit" value="Sing In"  [disabled]="loginData.invalid"/>
         </p>
         <p>
           <a href="">Forget password?</a>
