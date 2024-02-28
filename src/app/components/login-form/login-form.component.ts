@@ -12,7 +12,10 @@ import { CommonModule } from '@angular/common';
     ReactiveFormsModule
   ],
   templateUrl: './login-form.component.html',
-  styleUrl: './login-form.component.scss'
+  styleUrls: [
+    './login-form.component.scss',
+    './media.scss'
+  ]
 })
 export class LoginFormComponent {
   @Input() isLogin: boolean = false;

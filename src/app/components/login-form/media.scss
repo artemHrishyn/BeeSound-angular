@@ -1,0 +1,18 @@
+@media screen and (max-width: 1700px) {
+    .col{
+        padding: 40px 25px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    input{
+        padding: 5px;
+    }
+
+    .container__left[_ngcontent-ng-c1415607799] {
+        display: none;
+    }
+    .col{
+        width: 100%;
+    }
+}
