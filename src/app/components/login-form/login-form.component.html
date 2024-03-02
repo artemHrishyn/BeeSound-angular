@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="container__left col">
+    <div class="login-text">
+      <h2>Logo</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+        malesuada vel libero vitae eleifend. Fusce tristique ipsum lorem.
+      </p>
+      <a class="btn" href="">Read More</a>
+    </div>
+  </div>
+  <div class="col">
+    <form novalidate [formGroup]="loginData" (ngSubmit)="onSubmit(loginData)">
+      <h2>Login</h2>
+        <p>
+          <input
+            type="text"
+            placeholder="Username" 
+            formControlName="login"
+            name="login" required
+          />
+        </p>
+        <p>
+          <input
+            #password
+            type="password"
+            placeholder="Password"
+            formControlName="password"
+            name="password" required
+          />
+        </p>
+        <p>
+          <input class="btn" type="submit" value="Sing In"  [disabled]="loginData.invalid"/>
+        </p>
+        <p>
+          <a href="">Forget password?</a>
+          <a href="">Create an account.</a>
+        </p>
+    </form>
+  </div>
+</div>
